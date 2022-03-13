@@ -4,9 +4,9 @@
 /* Custom properties */
 :root{
     --light-color: #fff;
-    --light-color-alt: #a1a8bd;
-    --primary-background-color: #060607;
-    --secondary-background-color: #252830;
+    --light-color-alt: #dfe2ec;
+    --primary-background-color: #0d0d13;
+    --secondary-background-color: #4b0507;
     --hover-light-color: var(--light-color);
     --hover-dark-color: var(--primary-background-color);
     --gradient-color: linear-gradient(
@@ -126,8 +126,9 @@ body.light-theme{
 }
 
 .logo{
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-lg);
     color: var(--light-color);
+    position: center;
 }
 
 .menu{
@@ -137,8 +138,8 @@ body.light-theme{
     width: 23rem;
     padding: 1.5rem;
     background-color:var(--secondary-background-color);
-    opacity: 0;
-    transform: scale(0);
+    /* opacity: 0;
+    transform: scale(0); */
     transition: opacity .25s ease-in;
 }
 
