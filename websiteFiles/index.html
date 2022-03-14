@@ -9,13 +9,15 @@
         <link rel="icon" href="./chips.png"
         type="image/x-icon">
             <!-- Favicon -->
-        <link rel="stylesheet" href="./main.css" type="text/css">
+        <link rel="stylesheet" href="./public/css/main.css" type="text/css">
             <!-- Remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Swiper.js styles -->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
     <!-- Custom styles -->
     </head>
+    <body>
+        <h2>SPA Authentication Sample</h2>
 
     <body>
         <header class="header" id ="header">
@@ -78,7 +80,12 @@
               </nav>
             
         </header>
-
+        <br>
+        <br>
+        <p>Welcome to our page!</p>
+        <button id="btn-login" disabled="true" onclick="login()">Log in</button>
+        <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
+      </body>
 
         <nav>
              <a href="#productionInfo"> Production info</a>
@@ -133,10 +140,28 @@
         <a href="#TopOfPage"> Return to top of page</a>
     </p>
 
+    <!--tokens-->
+    <div class="hidden" id="gated-content">
+        <p>
+          You're seeing this content because you're currently
+          <strong>logged in</strong>.
+        </p>
+        <label>
+          Access token:
+          <pre id="ipt-access-token"></pre>
+        </label>
+        <label>
+          User profile:
+          <pre id="ipt-user-profile"></pre>
+        </label>
+      </div>
+
     <!--swiper.js-->
     <script src="swiper-bundle.min.js"></script>
     <!--custom made script-->
     <script src="./main.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+     <script src="./public/js/app.js"></script>
     </body>
 
 </html>
