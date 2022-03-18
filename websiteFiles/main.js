@@ -1,44 +1,62 @@
-// grab elements
+// Grab elements
 const selectElement = (selector) => {
-    const element = document.querySelector(selector)
+    const element = document.querySelector(selector);
     if(element) return element;
-    throw new Error(`Something went wrong, make sure that ${selector} exists or is typed correctly`);
+    throw new Error(`Something went wrong! Make sure that ${selector} exists/is typed correctly.`);  
 };
 
-//nav styles on scroll
+//Nav styles on scroll
 const scrollHeader = () =>{
-    const headerElement = selectElement('#header');
-    if(this.scrollY >= 15){
-        headerElement.classlist.add('activated');
-    }else{
-        headerElement.classlist.remove('activated');
+    const navbarElement = selectElement('#header');
+    if(this.scrollY >= 15) {
+        navbarElement.classList.add('activated');
+    } else {
+        navbarElement.classList.remove('activated');
     }
-};
+}
 
 window.addEventListener('scroll', scrollHeader);
 
+// Open menu & search pop-up
 const menuToggleIcon = selectElement('#menu-toggle-icon');
+const formOpenBtn = selectElement('#search-icon');
+const formCloseBtn = selectElement('#form-close-btn');
+const searchContainer = selectElement('#search-form-container');
 
- toggleMenu() = () => {
+const toggleMenu = () =>{
     const mobileMenu = selectElement('#menu');
-    mobileMenu.classlist.toggle('activated');
-    menuToggleIcon.classlist.toggle('activated');
-};
+    mobileMenu.classList.toggle('activated');
+    menuToggleIcon.classList.toggle('activated');
+}
 
 menuToggleIcon.addEventListener('click', toggleMenu);
 
-//switch theme/ add to local storage
+// Open/Close search form popup
+formOpenBtn.addEventListener('click', () => searchContainer.classList.add('activated'));
+formCloseBtn.addEventListener('click', () => searchContainer.classList.remove('activated'));
+// -- Close the search form popup on ESC keypress
+window.addEventListener('keyup', (event) => {
+    if(event.key === 'Escape') searchContainer.classList.remove('activated');
+});
+
+// Switch theme/add to local storage
 const body = document.body;
-const themeToggleBtn = selectElement('theme-toggle-btn');
-const currentTheme = localStorage.getItem('currentTheme')
+const themeToggleBtn = selectElement('#theme-toggle-btn');
+const currentTheme = localStorage.getItem('currentTheme');
 
-themeToggleBtn.addEventListener('click', () => {
-    bodyElement.classlist.toggle('light-theme');
+// Check to see if there is a theme preference in local Storage, if so add the ligt theme to the body
+if (currentTheme) {
+    body.classList.add('light-theme');
+}
 
-    if(bodyElement.classList.toggle('light-theme')){
+themeToggleBtn.addEventListener('click', function () {
+    // Add light theme on click
+    body.classList.toggle('light-theme');
+
+    // If the body has the class of light theme then add it to local Storage, if not remove it
+    if (body.classList.contains('light-theme')) {
         localStorage.setItem('currentTheme', 'themeActive');
-    }else{
+    } else {
         localStorage.removeItem('currentTheme');
     }
-    });
-// Check to see if there is a theme preference in local Storage, if so add the light theme to the body
+});

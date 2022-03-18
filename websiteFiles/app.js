@@ -148,3 +148,13 @@ const updateUI = async () => {
     document.getElementById("gated-content").classList.add("hidden");
   }
 };
+
+FB.getLoginStatus(function(response) {
+  statusChangeCallback(response);
+});
+
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}

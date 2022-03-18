@@ -9,31 +9,31 @@
         <link rel="icon" href="./chips.png"
         type="image/x-icon">
             <!-- Favicon -->
-        <link rel="stylesheet" href="./public/css/main.css" type="text/css">
+        <link rel="stylesheet" href="./main.css" type="text/css">
             <!-- Remix icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Swiper.js styles -->
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./swiper-bundle.min.css"/>
     <!-- Custom styles -->
     </head>
-    <body>
-        <h2>SPA Authentication Sample</h2>
+
 
     <body>
-        <header class="header" id ="header">
-        
+        <!-- Header -->
+        <header class="header" id="header">
+    
             <nav class="navbar container">
                 <a href="./index.html">
-                    <h2 class="logo">BookMyDealer</h2>
+                    <h2 class="logo">Bookmydealers</h2>
                 </a>
-
+    
                 <div class="menu" id="menu">
                     <ul class="list">
                         <li class="list-item">
-                            <a href="#" class="list-link current">Home</a>
+                            <a href="index.html" class="list-link current">Home</a>
                         </li>
                         <li class="list-item">
-                            <a href="#" class="list-link">My Profile</a>
+                            <a href="./form.html" class="list-link">My Profile</a>
                         </li>
                         <li class="list-item">
                             <a href="#" class="list-link">My Events</a>
@@ -41,62 +41,54 @@
                         <li class="list-item">
                             <a href="#" class="list-link">My Availability</a>
                         </li>
-        
                         <li class="list-item">
                             <a href="#" class="list-link">Membership</a>
                         </li>
-                        <li class="list-item screen-lg-hidden">
-                            <a href="#" class="list-link">Sign up</a>
-                        </li>
-                        <li class="list-item screen-lg-hidden">
-                            <a href="#" class="list-link">Sign in</a>
-                        </li>
                         <li class="list-item">
-                            <a href="#" class="list-link">About</a>
+                            <a href="about.html" class="list-link">About</a>
+                        </li>
+                        <li class="list-item screen-lg-hidden">
+                            <a href="./signin.html" class="list-link">Sign in</a>
+                        </li>
+                        <li class="list-item screen-lg-hidden">
+                            <a href="./signup.html" class="list-link">Sign up</a>
                         </li>
                     </ul>
                 </div>
-        
+    
                 <div class="list list-right">
-                    <button class ="btn place-items-center" id="theme-toggle-btn">
+                    <button class="btn place-items-center" id="theme-toggle-btn">
                         <i class="ri-sun-line sun-icon"></i>
                         <i class="ri-moon-line moon-icon"></i>
                     </button>
-        
-                    <button class ="btn place-items-center" id="search-icon">
+    
+                    <button class="btn place-items-center" id="search-icon">
                         <i class="ri-search-line"></i>
                     </button>
-        
-                    <button class ="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon"></button>
+    
+                    <button class="btn place-items-center screen-lg-hidden menu-toggle-icon" id="menu-toggle-icon">
                         <i class="ri-menu-3-line open-menu-icon"></i>
                         <i class="ri-close-line close-menu-icon"></i>
                     </button>
-        
-                    <a href="" class="list-link screen-sm-hidden">Sign in</a>
-                    <a href="" class="list-link screen-sm-hidden btn sign-up-btn fancy-border">
+    
+                    <a href="#" class="list-link screen-sm-hidden">Sign in</a>
+                    <a href="#" class="btn sign-up-btn fancy-border screen-sm-hidden">
                         <span>Sign up</span>
                     </a>
                 </div>
-              </nav>
-            
+            </nav>
         </header>
-        <br>
-        <br>
-        <p>Welcome to our page!</p>
-        <button id="btn-login" disabled="true" onclick="login()">Log in</button>
-        <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
-      </body>
+        
 
-        <nav>
-             <a href="#productionInfo"> Production info</a>
-        </nav>
 
         <section id="TopOfPage"> 
         <br>
         <br>
         <br>
         <br>
-
+        <nav>
+            <a href="#productionInfo"> Production info</a>
+       </nav>
         <h2>Bookmydealers is the all in one solution for booking dealers for your Casino events</h2>
          <p>Create a free profile to start</p>
             <ol>
@@ -114,33 +106,66 @@
          <br>
          <br>
         </section> 
+        <footer class="footer section">
 
+            <div class="footer-container container d-grid">
+                
+                <div class="company-data">
+                    <a href="./index.html">
+                        <h2 class="logo">Bookmydealers</h2>
+                    </a>
+                    <p class="company-description">The all in one solution for booking dealers for your Casino events</p>
+                    <p>
+                        Brought to you by
+                    </p>
+                     <abbr title="Alliance Game Rentals">
+                         <a href="http://alliancegamerentals.com/">
+                             AGR</a> </abbr><br>
+            
+                             <p>
+                                <br>
+                                <a href="#TopOfPage"> Return to top of page</a>
+                            </p>
+    
+                    <span class="copyright-notice">&copy;2022 Bookmydealers. All rights reserved.</span>
+                </div>
+                <div>
+                <h6 class="title footer-title">Pages</h6>
+                    <ul class="footer-list list">
+                        <li class="list-item">
+                            <a href="index.html" class="list-link current">Home</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">My Profile</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">My Events</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">My Availability</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="list-link">Membership</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="about.html" class="list-link">About</a>
+                        </li>
+                        <li class="list-item screen-lg-hidden">
+                            <a href="./signin.html" class="list-link">Sign in</a>
+                        </li>
+                        <li class="list-item screen-lg-hidden">
+                            <a href="./signup.html" class="list-link">Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+    
+        </footer>
          <!-- Address and copyright info for webpage ownership-->
-         <section id="productionInfo">
-         <address>
-             Company<br>
-             Address<br>
-             Here<br>
-         </address>
-         <br>
-
-         <p>
-            Brought to you by
-        </p>
-         <abbr title="Alliance Game Rentals">
-             <a href="http://alliancegamerentals.com/">
-                 AGR</a> </abbr><br>
 
         </section>
         
-        <br>
-        &lt;&lt;&lt;&lt; &copy; <a href="about.html"> TrueCodersTeam24  </a>  &gt;&gt;&gt;&gt;
-    <p>
-        <br>
-        <a href="#TopOfPage"> Return to top of page</a>
-    </p>
 
-    <!--tokens-->
+    <!-- tokens
     <div class="hidden" id="gated-content">
         <p>
           You're seeing this content because you're currently
@@ -154,14 +179,15 @@
           User profile:
           <pre id="ipt-user-profile"></pre>
         </label>
-      </div>
+      </div> -->
+
 
     <!--swiper.js-->
-    <script src="swiper-bundle.min.js"></script>
+    <!-- <script src="swiper-bundle.min.js"></script> -->
     <!--custom made script-->
     <script src="./main.js"></script>
     <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
-     <script src="./public/js/app.js"></script>
+     <script src="./app.js"></script>
     </body>
 
 </html>
