@@ -88,6 +88,7 @@ text {
     position:absolute
 }
 
+
 /* Reusable classes */
 .container{
     max-width: 160rem;
@@ -130,8 +131,7 @@ text {
 }
 
 .logo{
-    font-size: var(--font-size-md);
-    color: var(--light-color);
+    max-width: 30%;
 }
 
 
